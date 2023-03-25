@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>WebClap</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>WebClap</h1>
+    <div id="clap-container">
+      <button id="clap-button">Clap</button>
+      <span id="clap-count">0</span>
+    </div>
+    <div id="comment-container">
+      <h2>Comments</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment"></textarea><br>
+        <button type="submit" id="submit-button">Submit</button>
+      </form>
+      <div id="comment-list"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
