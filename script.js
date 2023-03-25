@@ -37,18 +37,3 @@ commentForm.addEventListener('submit', (event) => {
   nameInput.value = '';
   commentInput.value = '';
 });
-
-const STORAGE_KEY = 'webclap-clap-count';
-
-let count = Number(localStorage.getItem(STORAGE_KEY));
-if (!count) {
-  localStorage.setItem(STORAGE_KEY, 0);
-  count = 0;
-}
-clapCount.textContent = count;
-
-clapButton.addEventListener('click', () => {
-  count++;
-  clapCount.textContent = count;
-  localStorage.setItem(STORAGE_KEY, count);
-});
