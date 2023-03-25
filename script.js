@@ -40,7 +40,11 @@ commentForm.addEventListener('submit', (event) => {
 
 const STORAGE_KEY = 'webclap-clap-count';
 
-let count = Number(localStorage.getItem(STORAGE_KEY)) || 0;
+let count = Number(localStorage.getItem(STORAGE_KEY));
+if (!count) {
+  localStorage.setItem(STORAGE_KEY, 0);
+  count = 0;
+}
 clapCount.textContent = count;
 
 clapButton.addEventListener('click', () => {
